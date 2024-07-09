@@ -1,0 +1,130 @@
+import tkinter
+from tkinter import *
+from tkinter.font import Font
+from tkinter import messagebox
+def btnclick():
+    messagebox.showinfo("messagebox","submit button clicked!")
+def btnclick1():
+    messagebox.showerror("messagebox","submit button clicked!")
+def btnclick2():
+    messagebox.showwarning("messagebox","submit button clicked!")
+def btnclick3():
+    messagebox.askyesnocancel("messagebox","submit button clicked!")
+def btnclick4():
+    messagebox.askretrycancel("messagebox","submit button clicked!")
+def btnclick5():
+    messagebox.askokcancel("messagebox","submit button clicked!")
+def btnclick6():
+    messagebox.askyesno("messagebox","submit button clicked!")    
+window=tkinter.Tk()
+window.geometry("500x500")
+window.title("label widget")
+myfont=Font(family="times",size=20,weight="bold")
+label=Label(window,text="UserName",font=myfont,bg="green",fg="white",padx=15,pady=15,width=15)
+label.pack()
+btn=Button(window,text="Submit",bg="blue",fg="black",padx=15,pady=15,width=15,font=myfont,command=btnclick)
+btn.pack()
+btn1=Button(window,text="Submit",bg="blue",fg="black",padx=15,pady=15,width=15,font=myfont,command=btnclick1)
+btn1.pack()
+btn2=Button(window,text="Submit",bg="blue",fg="black",padx=15,pady=15,width=15,font=myfont,command=btnclick2)
+
+btn2.pack()
+btn3=Button(window,text="Submit",bg="blue",fg="black",padx=15,pady=15,width=15,font=myfont,command=btnclick3)
+btn3.pack()
+btn4=Button(window,text="Submit",bg="blue",fg="black",padx=15,pady=15,width=15,font=myfont,command=btnclick4)
+btn4.pack()
+btn5=Button(window,text="Submit",bg="blue",fg="black",padx=15,pady=15,width=15,font=myfont,command=btnclick5)
+btn5.pack()
+btn6=Button(window,text="Submit",bg="blue",fg="black",padx=15,pady=15,width=15,font=myfont,command=btnclick6)
+btn6.pack()
+
+
+window.mainloop()
+
+Entry widget:
+import tkinter
+from tkinter import *
+from tkinter.font import Font
+from tkinter import messagebox
+def getdata():
+    data=inputbox.get()
+    messagebox.showinfo("message",data)
+window1=tkinter.Tk()
+window1.geometry("500x500")
+window1.title("label widget")
+myfont=Font(family="times",size=20,weight="bold")
+inputbox=Entry(window1,width=30,show="*",selectbackground="red",selectforeground="white",font=myfont)
+
+inputbox.pack()
+button=Button(window1,text="Get",bg="green",width=15,command=getdata)
+button.pack()
+window1.mainloop()
+
+radiobutton:
+import tkinter
+from tkinter import *
+from tkinter.font import Font
+from tkinter import messagebox
+def myfun():
+    if gender.get()==1:
+        data=gender.get()
+        messagebox.showinfo("message",data)
+    if gender.get()==2:
+        data=gender.get()
+        messagebox.showinfo("message",data)
+    if gender.get()==3:
+        data=gender.get()
+        messagebox.showinfo("message",data)    
+window1=tkinter.Tk()
+window1.geometry("500x500")
+window1.title("widgets")
+myfont=Font(family="times",size=15,weight="bold")
+gender=IntVar()
+male=Radiobutton(window1,text="male",variable=gender,value=1,bg="green")
+male.pack()
+female=Radiobutton(window1,text="female",variable=gender,value=2,bg="blue")
+female.pack()
+others=Radiobutton(window1,text="others",variable=gender,value=3,bg="red")
+others.pack()
+button=Button(window1,text="click",bg="purple",font=myfont,padx=15,pady=15,width=20,command=myfun)
+button.pack()
+window1.mainloop()
+
+menubar:
+import tkinter
+from tkinter import *
+display1=tkinter.Tk()
+display1.title("menu widget")
+display1.geometry("500x500")
+menubar=Menu(display1)
+filemenu=Menu(menubar,tearoff=0)
+filemenu.add_command(label="new")
+filemenu.add_command(label="open")
+filemenu.add_separator()
+filemenu.add_command(label="save")
+filemenu.add_command(label="save as")
+filemenu.add_separator()
+filemenu.add_command(label="close")
+filemenu.add_command(label="exit")
+menubar.add_cascade(label="File",menu=filemenu)
+display1.config(menu=menubar)
+editmenu=Menu(menubar,tearoff=0)
+editmenu.add_command(label="cut")
+editmenu.add_command(label="copy")
+editmenu.add_separator()
+editmenu.add_command(label="paste")
+editmenu.add_command(label="undo")
+editmenu.add_separator()
+editmenu.add_command(label="redo")
+menubar.add_cascade(label="Edit",menu=editmenu)
+display1.mainloop()
+
+checkbutton:
+python=Checkbutton(root,text="python",variable=course,onvalue=1)
+python.pack()
+java=Checkbutton(root,text="java",variable=course,onvalue=2)
+java.pack()
+react=Checkbutton(root,text="react",variable=course,onvalue=3)
+react.pack()
+javascript=Checkbutton(root,text="javascript",variable=course,onvalue=4)
+javascript.pack()
